@@ -18,7 +18,7 @@ class FirstPage extends StatelessWidget {
         statusBarColor: Color.fromRGBO(7, 58, 29, 1.0),
       ),
       child: Scaffold(
-        backgroundColor: Color.fromRGBO(7, 58, 29, 1.0),
+        //backgroundColor: Color.fromRGBO(7, 58, 29, 1.0),
         body: SafeArea(
           child: Container(
             height: size.height,
@@ -26,6 +26,7 @@ class FirstPage extends StatelessWidget {
             color: Colors.white,
             child: Stack(
               children: [
+                
                 Align(
                   alignment: Alignment.topCenter,
                   child: Column(
@@ -56,7 +57,8 @@ class FirstPage extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
                                     Text("My Profile", style: TextStyle(fontSize: 15.0.sp, color: Colors.white, fontWeight: FontWeight.w500),),
-                                    Icon(Icons.qr_code,  color: Colors.white, size: 30.0,)
+                                    IconButton(icon: Icon(Icons.qr_code,  color: Colors.white, size: 30.0,),
+                                    onPressed: (){}, )
                                   ],
                                 ),
                                 SizedBox(
@@ -92,7 +94,7 @@ class FirstPage extends StatelessWidget {
                                   height: 5.0.h,
                                 ),
                                 Padding(
-                                  padding:  EdgeInsets.symmetric(horizontal: 10.0.w),
+                                  padding:  EdgeInsets.symmetric(horizontal: 12.0.w),
                                   child: Container(
                                     height: 2.0.h,
                                     width: size.width,
@@ -106,7 +108,7 @@ class FirstPage extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding:  EdgeInsets.symmetric(horizontal: 5.0.w),
+                                  padding:  EdgeInsets.symmetric(horizontal: 8.0.w),
                                   child: Container(
                                     height: 2.0.h,
                                     width: size.width,
@@ -121,7 +123,7 @@ class FirstPage extends StatelessWidget {
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding:  EdgeInsets.symmetric(horizontal: 2.0.w),
+                                    padding:  EdgeInsets.symmetric(horizontal: 5.0.w),
                                     child: Container(
                                       //height: 20.0.h,
                                       width: size.width,
@@ -166,30 +168,38 @@ class FirstPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: 4.0.h,
+                            height: 2.0.h,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(Icons.person, color: Color.fromRGBO(70, 185, 104, 1.0), size: 35,),
-                                  SizedBox(
-                                    width: 5.0.w,
-                                  ),
-                                  Text("Personal", style: TextStyle(fontSize: 15.0.sp, color: Colors.black, fontWeight: FontWeight.w500),),
+                          Ink(
+                            child: InkWell(
+                              onTap: (){},
+                              child: Padding(
+                                padding:  EdgeInsets.symmetric(vertical: 2.0.h),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(Icons.person, color: Color.fromRGBO(70, 185, 104, 1.0), size: 35,),
+                                        SizedBox(
+                                          width: 5.0.w,
+                                        ),
+                                        Text("Personal", style: TextStyle(fontSize: 15.0.sp, color: Colors.black, fontWeight: FontWeight.w500),),
+                                          
+                                      ],
+                                    ),
+                                    Icon(Icons.arrow_forward_ios, size: 30, color: Color.fromRGBO(159, 159, 148, 1.0),),
                                     
-                                ],
+                                  ],
+                                ),
                               ),
-                              Icon(Icons.arrow_forward_ios, size: 30, color: Color.fromRGBO(159, 159, 148, 1.0),),
-                              
-                            ],
+                            ),
                           ),
                           SizedBox(
-                            height: 4.0.h,
+                            height: 2.0.h,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -290,6 +300,7 @@ class FirstPage extends StatelessWidget {
                     ],
                   ),
                 ),
+                
                 
               ],
             ),

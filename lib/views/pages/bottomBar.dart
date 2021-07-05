@@ -147,7 +147,7 @@ class _BottomBarState extends State<BottomBar> {
             child: FloatingActionButton(
               elevation: 0.0,
               backgroundColor: Color.fromRGBO(174, 119, 67, 1.0),
-              child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 35,),
+              child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 30,),
               onPressed: (){
                 setState(() {
                           _myPage.jumpToPage(4);
