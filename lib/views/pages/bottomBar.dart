@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sizer/sizer.dart';
 
-
 class BottomBar extends StatefulWidget {
   @override
   _BottomBarState createState() => _BottomBarState();
@@ -37,12 +36,11 @@ class _BottomBarState extends State<BottomBar> {
         key: _scaffoldKey,
         body: PageView(
           controller: _myPage,
-          onPageChanged: (int i){
+          onPageChanged: (int i) {
             _screenNumber = i;
           },
           children: widget.toList(),
           physics: NeverScrollableScrollPhysics(),
-          
         ),
         backgroundColor: Colors.white,
         bottomNavigationBar: BottomAppBar(
@@ -67,17 +65,23 @@ class _BottomBarState extends State<BottomBar> {
                       borderRadius: BorderRadius.circular(3.5.h),
                     ),
                     child: InkWell(
-                      borderRadius: BorderRadius.circular(3.5.h),
-                      onTap: (){
-                        setState(() {
-                          _myPage.jumpToPage(0);
-                        });
-                      },
-                      child: _screenNumber == 0 ?
-                      Icon(Icons.home_outlined, color: Color.fromRGBO(62, 146, 78, 1.0), size: 35,)
-                      :
-                      Icon(Icons.home_outlined, color: Color.fromRGBO(152, 147, 137, 1.0), size: 35,)
-                    ),
+                        borderRadius: BorderRadius.circular(3.5.h),
+                        onTap: () {
+                          setState(() {
+                            _myPage.jumpToPage(0);
+                          });
+                        },
+                        child: _screenNumber == 0
+                            ? Icon(
+                                Icons.home_outlined,
+                                color: Color.fromRGBO(62, 146, 78, 1.0),
+                                size: 35,
+                              )
+                            : Icon(
+                                Icons.home_outlined,
+                                color: Color.fromRGBO(152, 147, 137, 1.0),
+                                size: 35,
+                              )),
                   ),
                   Ink(
                     height: 7.0.h,
@@ -86,17 +90,23 @@ class _BottomBarState extends State<BottomBar> {
                       borderRadius: BorderRadius.circular(3.5.h),
                     ),
                     child: InkWell(
-                      borderRadius: BorderRadius.circular(3.5.h),
-                      onTap: (){
-                        setState(() {
-                          _myPage.jumpToPage(1);
-                        });
-                      },
-                      child: _screenNumber == 1 ?
-                      Icon(Icons.bar_chart_outlined, color: Color.fromRGBO(62, 146, 78, 1.0), size: 35,)
-                      :
-                      Icon(Icons.bar_chart_outlined, color: Color.fromRGBO(152, 147, 137, 1.0), size: 35,)
-                    ),
+                        borderRadius: BorderRadius.circular(3.5.h),
+                        onTap: () {
+                          setState(() {
+                            _myPage.jumpToPage(1);
+                          });
+                        },
+                        child: _screenNumber == 1
+                            ? Icon(
+                                Icons.bar_chart_outlined,
+                                color: Color.fromRGBO(62, 146, 78, 1.0),
+                                size: 35,
+                              )
+                            : Icon(
+                                Icons.bar_chart_outlined,
+                                color: Color.fromRGBO(152, 147, 137, 1.0),
+                                size: 35,
+                              )),
                   ),
                   Ink(
                     height: 7.0.h,
@@ -105,17 +115,23 @@ class _BottomBarState extends State<BottomBar> {
                       borderRadius: BorderRadius.circular(3.5.h),
                     ),
                     child: InkWell(
-                      borderRadius: BorderRadius.circular(3.5.h),
-                      onTap: (){
-                        setState(() {
-                          _myPage.jumpToPage(2);
-                        });
-                      },
-                      child: _screenNumber == 2 ?
-                      Icon(Icons.notifications_outlined, color: Color.fromRGBO(62, 146, 78, 1.0),size: 35,)
-                      :
-                      Icon(Icons.notifications_outlined, color: Color.fromRGBO(152, 147, 137, 1.0), size: 35,)
-                    ),
+                        borderRadius: BorderRadius.circular(3.5.h),
+                        onTap: () {
+                          setState(() {
+                            _myPage.jumpToPage(2);
+                          });
+                        },
+                        child: _screenNumber == 2
+                            ? Icon(
+                                Icons.notifications_outlined,
+                                color: Color.fromRGBO(62, 146, 78, 1.0),
+                                size: 35,
+                              )
+                            : Icon(
+                                Icons.notifications_outlined,
+                                color: Color.fromRGBO(152, 147, 137, 1.0),
+                                size: 35,
+                              )),
                   ),
                   Ink(
                     height: 7.0.h,
@@ -124,16 +140,23 @@ class _BottomBarState extends State<BottomBar> {
                       borderRadius: BorderRadius.circular(3.5.h),
                     ),
                     child: InkWell(
-                      borderRadius: BorderRadius.circular(3.5.h),
-                      onTap: (){setState(() {
-                          _myPage.jumpToPage(3);
-                        });
-                      },
-                      child: _screenNumber == 3 ?
-                      Icon(Icons.person_outline, color: Color.fromRGBO(62, 146, 78, 1.0), size: 35,)
-                      :
-                      Icon(Icons.person_outline, color: Color.fromRGBO(152, 147, 137, 1.0), size: 35,)
-                    ),
+                        borderRadius: BorderRadius.circular(3.5.h),
+                        onTap: () {
+                          setState(() {
+                            _myPage.jumpToPage(3);
+                          });
+                        },
+                        child: _screenNumber == 3
+                            ? Icon(
+                                Icons.person_outline,
+                                color: Color.fromRGBO(62, 146, 78, 1.0),
+                                size: 35,
+                              )
+                            : Icon(
+                                Icons.person_outline,
+                                color: Color.fromRGBO(152, 147, 137, 1.0),
+                                size: 35,
+                              )),
                   )
                 ],
               ),
@@ -147,18 +170,21 @@ class _BottomBarState extends State<BottomBar> {
             child: FloatingActionButton(
               elevation: 0.0,
               backgroundColor: Color.fromRGBO(174, 119, 67, 1.0),
-              child: Icon(Icons.qr_code_scanner, color: Colors.white, size: 30,),
-              onPressed: (){
+              child: Icon(
+                Icons.qr_code_scanner,
+                color: Colors.white,
+                size: 30,
+              ),
+              onPressed: () {
                 setState(() {
-                          _myPage.jumpToPage(4);
-                        });
+                  _myPage.jumpToPage(4);
+                });
               },
             ),
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),
-      
     );
   }
 }

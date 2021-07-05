@@ -11,19 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Sizer(
-      builder: (BuildContext context, Orientation orientation, DeviceType deviceType) { 
+      builder: (BuildContext context, Orientation orientation,
+          DeviceType deviceType) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-        title: 'Abdulazeez',
-        theme: ThemeData(
-          
-          primarySwatch: Colors.green,
-        ),
-        home: BottomBar(),
-      );
-       },
-      
+          title: 'Abdulazeez',
+          theme: ThemeData(
+            primarySwatch: Colors.green,
+          ),
+          home: BottomBar(),
+        );
+      },
     );
   }
 }
-
